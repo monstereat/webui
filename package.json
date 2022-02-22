@@ -1,14 +1,20 @@
 {
-  "name": "root",
+  "name": "bwebui",
   "private": true,
+  "main": "lib/index/index.js",
   "scripts": {
-      "dev": "NODE_ENV=dev webpack-dev-server --config ./config/dev.config.js",
-      "build:lib": "webpack-dev-server --config ./config/lib.config.js",
-      "build": "NODE_ENV=prod webpack-dev-server --config ./config/prod.config.js",
-      "build:pck": "node config/pck.config.js",
-      "build:cp": "node config/index.config.js"
+    "dev": "NODE_ENV=dev webpack-dev-server --config ./config/dev.config.js",
+    "build:lib": "webpack-dev-server --config ./config/lib.config.js",
+    "build": "NODE_ENV=prod webpack-dev-server --config ./config/prod.config.js",
+    "build:pck": "node config/pck.config.js",
+    "build:cp": "node config/index.config.js"
+  },
+  "lint-staged": { 
+      "src/* */* .{js,json,vue,ts,tsx}": [ "npm run lint" ] 
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0",
+    "lint-staged": "^12.3.4"
   }
 }
