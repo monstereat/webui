@@ -1,5 +1,6 @@
 // .babelrc
 {
+    "presets": ["@babel/preset-env"],
     "plugins":[
         ["import", {
             "libraryName": "bwebui"
