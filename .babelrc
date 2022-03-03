@@ -1,9 +1,9 @@
 // .babelrc
 {
     "plugins":[
-        "import", {
-            "libraryName": "ddmc-ui",
-        }
+        ["import", {
+            "libraryName": "bwebui"
+        }]
     ]
 }
 

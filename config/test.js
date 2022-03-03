@@ -1,10 +1,7 @@
 const path = require('path')
-const { merge } = require('webpack-merge')
-const common = require('./base.config.js')
 const fs = require('fs')
 const resolve = path.resolve
 const join = path.join
-  
 function getEntries(path) {
     let files =  fs.readdirSync(resolve(path));
     const entries = files.reduce( (ret, item) => {
@@ -21,16 +18,5 @@ function getEntries(path) {
     }, {})
     return entries;
 }
-    
-module.exports = merge(common,{
-    mode: 'production',
-    devtool:'source-map',
-    // entry:path.resolve(__dirname, '../packages/index.js'),
-    entry: getEntries(path.resolve(__dirname, '../packages')),
-    output:{
-        // filename: 'main.js',
-        path: path.join(__dirname, '../lib'),
-        libraryExport: "default",
-        libraryTarget: 'umd'
-    },
-})
+
+console.log('xxxxxx', getEntries(path.resolve(__dirname, '../packages')))

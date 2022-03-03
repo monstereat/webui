@@ -23,4 +23,5 @@
 hs_err_pid*
 .history
 /node_modules
+/lib
 

@@ -1,3 +1,4 @@
+const common = require('./base.config.js')
 const path = require('path')
 module.exports = merge(common,{
     mode: 'development',

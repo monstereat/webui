@@ -1,20 +1,53 @@
 {
   "name": "bwebui",
-  "private": true,
-  "main": "lib/index/index.js",
+  "private": false,
+  "version": "1.0.5",
+  "main": "lib/index.js",
   "scripts": {
     "dev": "NODE_ENV=dev webpack-dev-server --config ./config/dev.config.js",
-    "build:lib": "webpack-dev-server --config ./config/lib.config.js",
-    "build": "NODE_ENV=prod webpack-dev-server --config ./config/prod.config.js",
+    "build:lib": "webpack --config ./config/lib.config.js",
+    "build": "NODE_ENV=prod webpack --config ./config/prod.config.js",
     "build:pck": "node config/pck.config.js",
-    "build:cp": "node config/index.config.js"
+    "build:cp": "node config/index.config.js",
+    "test": "node config/test.js"
   },
-  "lint-staged": { 
-      "src/* */* .{js,json,vue,ts,tsx}": [ "npm run lint" ] 
+  "description": "XXX 组件库",
+  "keywords": [
+    "element",
+    "vue",
+    "ddmc-ui"
+  ],
+  "author": "cd",
+  "browser": {
+    "crypto": false
+  },
+  "lint-staged": {
+    "src/* */* .{js,json,vue,ts,tsx}": [
+      "npm run lint"
+    ]
   },
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
     "husky": "^7.0.4",
     "lerna": "^4.0.0",
-    "lint-staged": "^12.3.4"
+    "lint-staged": "^12.3.4",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "style-loader": "^3.3.1",
+    "url-loader": "^1.0.1",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "babel-plugin-import": "^1.13.3",
+    "cross-env": "^7.0.3",
+    "crypto-browserify": "^3.12.0",
+    "json-templater": "^1.2.0",
+    "save-dev": "0.0.1-security"
   }
 }
