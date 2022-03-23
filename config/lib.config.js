@@ -29,7 +29,7 @@ module.exports = merge(common,{
     entry: getEntries(path.resolve(__dirname, '../packages')),
     output:{
         // filename: 'main.js',
-        filename:'[name]/[name].js',
+        filename:'[name]/index.js',
         path: path.join(__dirname, '../lib'),
         libraryExport: "default",
         libraryTarget: 'umd'
