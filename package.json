@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack serve --progress --config ./config/dev.config.js",
     "build:lib": "webpack --config ./config/lib.config.js",
-    "build": "NODE_ENV=prod webpack --config ./config/prod.config.js",
+    "build": "webpack --config ./config/prod.config.js",
     "build:pck": "node config/pck.config.js",
     "build:cp": "node config/index.config.js",
     "test": "node config/test.js"
@@ -31,12 +31,14 @@
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
+    "css-minimizer-webpack-plugin": "^3.4.1",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.4",
     "lerna": "^4.0.0",
     "lint-staged": "^12.3.4",
     "progress-bar-webpack-plugin": "^2.1.0",
     "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.1",
     "url-loader": "^1.0.1",
     "vue-loader": "^15.9.8",
     "vue-template-compiler": "^2.6.14",
