@@ -7,7 +7,7 @@ const path = require('path')
 module.exports = merge(common, {
     mode: 'development',
     devtool: 'inline-source-map',
-    entry: path.resolve(__dirname, '../example/app.js'),
+    entry: path.resolve(__dirname, '../examples/app.js'),
     devServer: {
         // contentBase: path.join(__dirname, 'dist'),
         hot: true,
@@ -16,7 +16,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../example/index.html')
+            template: path.resolve(__dirname, '../examples/index.html')
         })
     ]
 })
