@@ -12,13 +12,12 @@
     "build:cp": "node config/index.config.js",
     "test": "node config/test.js"
   },
-  "description": "XXX 组件库",
+  "description": "邦盛组件库",
   "keywords": [
     "element",
-    "vue",
-    "ddmc-ui"
+    "vue"
   ],
-  "author": "cd",
+  "author": "monstereat",
   "browser": {
     "crypto": false
   },
